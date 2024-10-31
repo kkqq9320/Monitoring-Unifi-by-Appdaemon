@@ -79,7 +79,7 @@ class MonitoringUnifi(mqtt.Mqtt):
             if not isinstance(data, dict) or 'data' not in data:
                 raise ValueError("Invalid data format received from API")
             self.device_mapping = {device['mac']: device for device in data.get('data', [])}
-            self.log("Successfully retrieved Unifi device data", level="INFO")
+            self.log("Successfully retrieved Unifi device data", level="DEBUG")
         except requests.exceptions.Timeout:
             raise TimeoutError("Device fetch request timed out")
         except requests.exceptions.RequestException as e:
