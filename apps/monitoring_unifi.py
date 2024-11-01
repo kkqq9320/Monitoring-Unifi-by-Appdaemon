@@ -168,7 +168,7 @@ class MonitoringUnifi(mqtt.Mqtt):
             if device_id not in self.last_known_values:
                 self.last_known_values[device_id] = {}
             
-            if new_value not in [0, 'Unknown', None]:
+            if new_value not in [0, '1970-01-01 09:00', 'Unknown', None]:
                 self.last_known_values[device_id][metric] = new_value
                 return new_value
             return self.last_known_values[device_id].get(metric, 'Unknown')
