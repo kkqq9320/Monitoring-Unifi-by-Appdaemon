@@ -141,7 +141,7 @@ appdaemon:
       type: mqtt
       namespace: mqtt
       # verbose: True
-      client_host: 192.168.1.100 # yout mqtt broker'ip. The IP of homeassistant if installed as an add-on
+      client_host: 192.168.1.100 # your mqtt broker's ip. The IP of homeassistant if installed as an add-on
       client_port: 1883
       client_id: "appdaemon"   # Client ID as seen in the MQTT Addon log
       client_user: !secret mqtt_user
