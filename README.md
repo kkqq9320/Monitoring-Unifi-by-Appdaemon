@@ -40,7 +40,7 @@ An AppDaemon app for monitoring information related to UniFi routers and access 
 ## How it works
   - ⚠️ _**Only read access**_ is available, and _**NO CONTROL actions**_ can be performed
   - Every 30 seconds, It requests information from the router using the [`UniFi API`](https://ubntwiki.com/products/software/unifi-controller/api)
-  - AppDaemon receives and processes the information, then publish it to the `MQTT Broker` through the `AppDaemon MQTT plugin`
+  - AppDaemon receives and processes the information, then publish it to the `MQTT Broker` through the ~~`AppDaemon MQTT plugin`~~
   - The information sent to the `MQTT Broker` utilizes `MQTT Discovery` to automatically create devices in the `MQTT integration`, categorized by MAC address
     - All AP-related sensors have an entity_id of `sensor.unifi_ap_{device name}_{information type}`, and <br>router-related sensors have an entity_id of `sensor.{device name}_{information type}`.<br>The `{device names}` are all the names you set in the `UniFi web UI`.
 
@@ -135,17 +135,17 @@ appdaemon:
       token: '***REDACTED***'
       namespace: default
     #######################################
-    # !!! MQTT Plugin must be defined !!! #
+    
     #######################################
-    MQTT:
-      type: mqtt
-      namespace: mqtt
+    # MQTT:
+    #   type: mqtt
+    #   namespace: mqtt
       # verbose: True
-      client_host: 192.168.1.100 # your mqtt broker's ip. The IP of homeassistant if installed as an add-on
-      client_port: 1883
-      client_id: "appdaemon"   # Client ID as seen in the MQTT Addon log
-      client_user: !secret mqtt_user
-      client_password: !secret mqtt_pw
+    #  client_host: 192.168.1.100 # your mqtt broker's ip. The IP of homeassistant if installed as an add-on
+    # client_port: 1883
+    # client_id: "appdaemon"   # Client ID as seen in the MQTT Addon log
+    # client_user: !secret mqtt_user
+    # client_password: !secret mqtt_pw
 
 http:
   url: http://127.0.0.1:5050
