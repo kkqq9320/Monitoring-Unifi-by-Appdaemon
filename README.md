@@ -27,8 +27,8 @@ An AppDaemon app for monitoring information related to UniFi routers and access 
 
 ## Prerequisites
 #### UniFi
-- You **MUST** create a _local user_. See the [LINK](https://www.home-assistant.io/integrations/unifiprotect/).
-- Maybe you need to increase `success.login.limit.count` on UniFi Router. _(Default setting is 5, I increased it to 25)_ SEE [How to](#increase-successloginlimitcount)
+- You **MUST** create a _local user_. CHECK the [LINK](https://www.home-assistant.io/integrations/unifiprotect/).
+- Maybe you need to increase `success.login.limit.count` on UniFi Router. _(Default setting is 5, I increased it to 25)_ CHECK [How to](#increase-successloginlimitcount)
 
 
 #### Homeassistant
@@ -71,7 +71,7 @@ Use [HACS](https://github.com/hacs/integration) or [Download](https://github.com
 ### Next step
 **Choose only one.**
 #### Change `app_dir:`
-- Add `app_dir: /homeassistant/appdaemon/apps` on appdaemon.yaml. SEE [appdaemon.yaml](#appdaemonyaml)
+- Add `app_dir: /homeassistant/appdaemon/apps` on appdaemon.yaml. CHECK [appdaemon.yaml](#appdaemonyaml)
 
 #### Copy `monitoring_unifi.py` on default directory
 1. Copy `Monitoring-Unifi-by-Appdaemon-version/apps/monitoring_unifi.py` or `/homeassistant/appdaemon/apps/Monitoring-Unifi-by-Appdaemon/monitoring_unifi.py`
