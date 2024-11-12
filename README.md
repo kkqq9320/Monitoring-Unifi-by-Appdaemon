@@ -62,12 +62,12 @@ Use [HACS](https://github.com/hacs/integration) or [Download](https://github.com
 3. Three dots in the upper right > custom repositories > <br>Add `https://github.com/kkqq9320/Monitoring-Unifi-by-Appdaemon` , type is `appdaemon`
 4. Search `Monitoring UniFi by Appdaemon` and install
 5. If you're having trouble, [CHECK](https://www.hacs.xyz/docs/faq/custom_repositories/)
-6. Copy `/homeassistant/appdaemon/apps/Monitoring-Unifi-by-Appdaemon/monitoring_unifi.py`
-7. or change appdaemon's `app_dir`. See [appdaemon.yaml](#appdaemonyaml)
+6. Add `app_dir: /homeassistant/appdaemon/apps` on appdaemon.yaml. SEE [appdaemon.yaml](#appdaemonyaml)
+7. `OR` Copy `/homeassistant/appdaemon/apps/Monitoring-Unifi-by-Appdaemon/monitoring_unifi.py` and go to [Next step](#next-step)
 
 ### Manual
 1. [Download](https://github.com/kkqq9320/Monitoring-Unifi-by-Appdaemon/releases/tag/version) source code.zip and unzip.
-2. Copy `Monitoring-Unifi-by-Appdaemon-version/apps/monitoring_unifi.py`
+2. Copy `Monitoring-Unifi-by-Appdaemon-version/apps/monitoring_unifi.py` and go to [Next step](#next-step)
 
 ### Next step
 1. Now you need to take this and paste it into your `addon_config` directory.
