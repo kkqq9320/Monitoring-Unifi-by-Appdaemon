@@ -34,7 +34,7 @@ An AppDaemon app for monitoring information related to UniFi routers and access 
 #### Homeassistant
 - You need an [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) for `MQTT discovery` and a server running the `MQTT broker`.
 
-~~AppDaemon~~
+~~### AppDaemon~~
 ~~MQTT must be defined under plugins in `appdaemon.yaml` since it publishes directly via `MQTT broker`.~~
 
 
