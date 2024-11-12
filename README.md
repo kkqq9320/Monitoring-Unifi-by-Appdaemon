@@ -33,8 +33,9 @@ An AppDaemon app for monitoring information related to UniFi routers and access 
 
 #### Homeassistant
 - You need an [MQTT integration](https://www.home-assistant.io/integrations/mqtt/) for `MQTT discovery` and a server running the `MQTT broker`.
-#### AppDaemon
-- MQTT must be defined under plugins in `appdaemon.yaml` since it publishes directly via `MQTT broker`. See [appdaemon.yaml](#appdaemonyaml)
+
+~~AppDaemon~~
+~~MQTT must be defined under plugins in `appdaemon.yaml` since it publishes directly via `MQTT broker`.~~
 
 
 ## How it works
@@ -62,6 +63,7 @@ Use [HACS](https://github.com/hacs/integration) or [Download](https://github.com
 4. Search `Monitoring UniFi by Appdaemon` and install
 5. If you're having trouble, [CHECK](https://www.hacs.xyz/docs/faq/custom_repositories/)
 6. Copy `/homeassistant/appdaemon/apps/Monitoring-Unifi-by-Appdaemon/monitoring_unifi.py`
+7. or change appdaemon's `app_dir`. See [appdaemon.yaml](#appdaemonyaml)
 
 ### Manual
 1. [Download](https://github.com/kkqq9320/Monitoring-Unifi-by-Appdaemon/releases/tag/version) source code.zip and unzip.
@@ -124,6 +126,7 @@ monitoring_unifi:
 ################################################################
 secrets: /homeassistant/secrets.yaml
 appdaemon:
+  app_dir: /homeassistant/appdaemon/apps
   latitude: '***REDACTED***'
   longitude: '***REDACTED***'
   elevation: '***REDACTED***'
@@ -208,4 +211,3 @@ mqtt_pw: "yourmqttpw"
 vi /usr/lib/ulp-go/config.props
 ```
 ![1](https://github.com/user-attachments/assets/c5871207-1888-4d65-bf0c-7ad0bc518235)
-
